@@ -14,13 +14,13 @@ export default class Header extends Component {
 
 const styles = StyleSheet.create({
   headerBar: {
-    backgroundColor: '#EE634C',
+    backgroundColor: '#2970d2',
     justifyContent: 'flex-end',
     alignItems: 'center',
-    height: 80
+    height: 60
   },
   headerText: {
-    color: '#FFFCED',
+    color: '#FDFDFD',
     fontSize: 25,
     fontWeight: "bold",
     fontFamily: 'AvenirNext-Italic'
