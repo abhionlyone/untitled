@@ -10,7 +10,7 @@ export default class ItemDetail extends Component {
       <View>
         <Card>
           <CardSection>
-            <View>
+            <View style={styles.thumbnailImage}>
               <Image style={{width: 50, height: 50}} source={{uri: this.props.data.thumbnail_image}}/>
             </View>
             <View style={{justifyContent: 'space-around', paddingLeft: 5}}>
@@ -32,5 +32,10 @@ const styles = StyleSheet.create({
     flex: 1,
     height: 300,
     width: null,
+    margin: 5
+  },
+  thumbnailImage: {
+    margin: 5,
+    justifyContent: 'center'
   }
 })
