@@ -18,6 +18,15 @@ const styles = StyleSheet.create({
     marginRight: 5,
     marginLeft: 5,
     padding: 15,
-    backgroundColor: '#FFFFFF'
+    backgroundColor: '#FFFFFF',
+    borderWidth: 1,
+    borderColor: '#D3D3D3',
+    borderRadius: 5,
+    shadowColor: 'black',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.2,
+    shadowRadius: 10,
+    elevation: 2,
+    position: 'relative'
   }
 })

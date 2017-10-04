@@ -1,11 +1,21 @@
 import React, {Component} from 'react';
-import {View, Text, StyleSheet, Image} from 'react-native';
+import {View, Text, StyleSheet, Image, Linking, Platform} from 'react-native';
 import Card from './Card';
-import CardSection from './CardSection'
+import CardSection from './CardSection';
+import Button from './Button';
 
 export default class ItemDetail extends Component {
+  handleClick = () => {
+    Linking.canOpenURL(this.props.data.url).then(supported => {
+      if (supported) {
+        Linking.openURL(this.props.data.url);
+      } else {
+        console.log("Don't know how to open URI: " + this.props.data.url);
+      }
+    });
+  };
   render(){
-    console.log("From Item Detail"+this.props.data)
+    console.log("From Item Detail "+Platform.OS)
     return(
       <View>
         <Card>
@@ -20,6 +30,11 @@ export default class ItemDetail extends Component {
           </CardSection>
           <CardSection>
             <Image style={styles.image} source={{uri: this.props.data.image}}/>
+          </CardSection>
+          <CardSection>
+            <Button onPress={this.handleClick}>
+              Buy
+            </Button>
           </CardSection>
         </Card>
       </View>
